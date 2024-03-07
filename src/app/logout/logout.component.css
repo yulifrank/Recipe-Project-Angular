@@ -1,0 +1,19 @@
+/* logout.component.css */
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* אפס העמוד בגובה כל העמוד */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* צבע רקע */
+  :host {
+    background-color: #f5f5f5; /* רקע אפור נינוח */
+  }
+  

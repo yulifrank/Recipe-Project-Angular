@@ -1,0 +1,33 @@
+
+.mat-toolbar {
+    background-color: #4646465b;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.example-icon {
+    color: rgb(60, 38, 12);
+}
+
+.favorite-icon {
+    color: rgb(255, 255, 255);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar button {
+    margin: 0 8px;
+}
+
+.mat-toolbar a {
+    margin: 0 8px;
+    color: rgb(83, 54, 18);
+}
+
+.mat-toolbar a mat-icon {
+    margin-right: 4px;
+}
+

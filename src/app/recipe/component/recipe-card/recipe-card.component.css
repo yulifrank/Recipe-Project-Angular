@@ -1,0 +1,108 @@
+
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+
+  .recipe-card {
+    max-width: 330px; 
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל משתנה על פי הצורך */
+    direction: rtl;
+    transition: box-shadow 0.3s; /* יצירת אנימציה עבור הצל */
+margin-bottom: 50px;
+  }
+  
+
+  .mat-card-header {
+    padding: 16px;
+    background-color: #f5f5f5;
+  }
+  
+  .mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .mat-card-subtitle {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .mat-card-content {
+    padding: 16px;
+  }
+  
+  .mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+  }
+  
+
+ 
+  .recipe-card:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* צל משתנה בעת מעבר עכבר */
+  }
+  .profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #0000001a;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    font-size: 16px;
+  }
+  
+  .profile-avatar mat-icon {
+    font-size: 22px;
+    margin-right: -6px; /* התאמת מיקום האייקון */
+  }
+  .like-animation {
+    display: none;
+    position: absolute;
+    top: 20%; /* אתה יכול לשנות את המיקום כפי שתרצה */
+    left: 20%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease, opacity 0.5s ease; /* הוספת המעבר בצינורות */
+    z-index: 9999;
+  }
+  
+  .like-animation.liked {
+    display: block;
+    animation: likeUp 1.5s forwards; /* הוספת אנימציה */
+  }
+  .like-animation mat-icon {
+    color: transparent; /* אפס את הצבע הקיים */
+    font-size: 14px; /* גודל הלב */
+    opacity: 0; /* הסתרת הלב */
+    transition: color 1s ease, transform 0.5s ease, opacity 0.5s ease; /* אנימציה של הצבע, התזוזה והשקיפות */
+  }
+  
+  .like-animation.liked mat-icon {
+    color: rgb(222, 90, 101); /* רוד */
+    text-shadow: 0 0 1px rgba(219, 112, 147, 0.8); /* הוספת צל לטקסט */
+    transform: scale(1.5); /* גודל הלב החדש */
+    opacity: 1; /* הצגת הלב החדש */
+  }
+  @keyframes likeUp {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(-40px); opacity: 0; }
+  }
+  
+
+  @keyframes likeUp {
+    0% { transform: translate(-50%, -50%) translateY(0); opacity: 1;  } /* הגדרת ההתחלה */
+    50% { transform: translate(-50%, -50%) translateY(-20px); opacity: 1; } /* העלייה */   
+     50% { transform: translate(-50%, -50%) translateY(-40px); opacity: 1; } /* העלייה */
+    50% { transform: translate(-50%, -50%) translateY(-60px); opacity: 1; } /* העלייה */
+    50% { transform: translate(-50%, -50%) translateY(-80px); opacity: 1; } /* העלייה */
+    90% { transform: translate(-50%, -50%) translateY(-90px); opacity: 1; } /* העלייה */
+    100% { transform: translate(-50%, -50%) translateY(-100px); opacity: 0; } /* העלייה והעלמה */
+  }
+  
+
