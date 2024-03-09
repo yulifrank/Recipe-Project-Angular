@@ -28,17 +28,19 @@ export class RecipeServiceService {
 
   // פונקציה ליצירת מתכון חדש בשרת
   addRecipe(recipe: Recipe): Observable<Recipe> {
-    return this.http.post<Recipe>(this.apiUrl, recipe);
+    return this.http.post<Recipe>(`${this.apiUrl}/Recipe`,recipe);
   }
+
+
 
   // פונקציה לעדכון מתכון קיים בשרת
   updateRecipe(recipe: Recipe): Observable<Recipe> {
-    return this.http.put<Recipe>(`${this.apiUrl}/${recipe.recipeCode}`, recipe);
+    return this.http.put<Recipe>(`${this.apiUrl}/Recipe/${recipe.recipeCode}`, recipe);
   }
 
   // פונקציה למחיקת מתכון מהשרת
   deleteRecipe(RecipeCode: number): Observable<Recipe> {
-    return this.http.delete<Recipe>(`${this.apiUrl}/${RecipeCode}`);
+    return this.http.delete<Recipe>(`${this.apiUrl}/Recipe/${RecipeCode}`);
   }
  
 }

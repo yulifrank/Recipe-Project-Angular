@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="!showRotatingIcon"><div class="all"><div class="container">
     <h2 class="title">הוספת מתכון חדש</h2>
     <form [formGroup]="recipeForm" (ngSubmit)="addRecipe()" class="form">
         <div class="form-group">
@@ -11,11 +11,14 @@
         <div class="form-group">
             <mat-form-field appearance="fill">
                 <mat-label>קטגוריה</mat-label>
-                <mat-select formControlName="CategoryCode">
-                    <mat-option value="1">קטגוריה 1</mat-option>
-                    <mat-option value="2">קטגוריה 2</mat-option>
-                    <mat-option value="3">קטגוריה 3</mat-option>
-                </mat-select>
+                <mat-select formControlName="categoryCode">
+                    <mat-option *ngFor="let category of categories" [value]="category.code">
+                      {{ category.name }}
+                      <mat-icon>{{ category.iconRoute }}</mat-icon>
+
+                      
+                    </mat-option>
+                  </mat-select>
             </mat-form-field>
         </div>
 
@@ -28,16 +31,27 @@
 
         <div class="form-group">
             <mat-form-field appearance="fill">
-                <mat-label>קטגוריה</mat-label>
+                <mat-label>דרגת קושי</mat-label>
                 <mat-select formControlName="difficultyLevel">
-                    <mat-option value="1"> 1</mat-option>
-                    <mat-option value="2"> 2</mat-option>
-                    <mat-option value="3"> 3</mat-option>
-                    <mat-option value="4"> 4</mat-option>
-                    <mat-option value="5"> 5</mat-option>
+                    <mat-option value="1">
+                        <mat-icon>thumb_up</mat-icon> קל
+                    </mat-option>
+                    <mat-option value="2">
+                        <mat-icon>remove_red_eye</mat-icon> בינוני
+                    </mat-option>
+                    <mat-option value="3">
+                        <mat-icon>build</mat-icon> מורכב
+                    </mat-option>
+                    <mat-option value="4">
+                        <mat-icon>flare</mat-icon> מאתגר
+                    </mat-option>
+                    <mat-option value="5">
+                        <mat-icon>whatshot</mat-icon> קשה מאוד
+                    </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
+        
 
         <div formArrayName="preparationSteps" class="sub-form">
             <mat-label>שלבי ההכנה</mat-label>
@@ -75,3 +89,10 @@
         <button mat-raised-button color="primary" type="submit">שמור</button>
     </form>
 </div>
+</div>
+</div>
+<div class="rotating-icon-container" *ngIf="showRotatingIcon">
+    <mat-icon class="rotating-icon">cached</mat-icon>
+    <p>אינך רשום עדיין במערכת</p>
+    <p>הינך מועבר להרשמה</p>
+  </div>

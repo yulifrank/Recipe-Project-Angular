@@ -13,17 +13,22 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AddRecipeComponent } from './component/add-recipe/add-recipe.component';
 import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeAllDetailsComponent } from './component/recipe-all-details/recipe-all-details.component';
+import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 
 
 
 @NgModule({
-  declarations: [RecipesListComponent,RecipeCardComponent,AddRecipeComponent,RecipeAllDetailsComponent],
+  declarations: [RecipesListComponent,RecipeCardComponent,AddRecipeComponent,RecipeAllDetailsComponent,EditRecipeComponent],
   imports: [
     CommonModule, RecipeRoutingModule,MatCardModule, MatSelectModule,MatButtonModule,MatIconModule,MatFormField,    MatInputModule,
-    MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,
+    MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,FormsModule ,
+    NgxSliderModule,MatSliderModule
 
 
   ],

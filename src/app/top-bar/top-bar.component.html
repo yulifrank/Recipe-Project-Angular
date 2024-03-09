@@ -1,38 +1,38 @@
 <mat-toolbar color="primary" class="mat-toolbar">
-    <button mat-icon-button class="example-icon" aria-label="Menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>מתכונים</span>
-    <span class="example-spacer"></span>
-  
- 
- 
-
-    <span style="display: flex; align-items: center;">
+    <span class="centered-content">
+        <!-- קישור להרשמה וכניסה -->
+        <a mat-button routerLink="/register">
+            <mat-icon>person_add</mat-icon>
+            הרשמה
+        </a>
         <a mat-button routerLink="/login">
             <mat-icon>login</mat-icon>
             כניסה
         </a>
+        <a mat-button routerLink="/logout">
+            <mat-icon>exit_to_app</mat-icon>
+            יציאה
+        </a>
+
+        <!-- קישור להוספת מתכון -->
         <a mat-button routerLink="/recipe/add">
             <mat-icon>add</mat-icon>
             הוסף מתכון
         </a>
 
+        <!-- קישורים לעמודי מתכונים ודף הבית -->
         <a mat-button routerLink="/recipe">
-            <mat-icon>product</mat-icon>
+            <mat-icon>cake</mat-icon>
             מתכונים
         </a>
         <a mat-button routerLink="/home">
             <mat-icon>home</mat-icon>
             דף הבית
         </a>
-        <a mat-button routerLink="/logout">
-            <mat-icon>exit_to_app</mat-icon>
-            יציאה
-        </a>
-        <a mat-button routerLink="/register">
-            <mat-icon>person_add</mat-icon>
-            הרשמה
-        </a>
+  
     </span>
+
 </mat-toolbar>
+<div ngIf="username" class="user-profile">
+    {{ username }}
+</div>

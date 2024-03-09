@@ -7,14 +7,13 @@ namespace Recipe_App.Controllers
   [ApiController]
   public class CategoryController : ControllerBase
   {
-    // רשימת נתונים דמו למחלקת Category
-    private static List<Category> categories = new List<Category>
+    private  List<Category> categories = new List<Category>
         {
-            new Category { Code = 1, Name = "Category 1", IconRoute = "icon1.png" },
-            new Category { Code = 2, Name = "Category 2", IconRoute = "icon2.png" }
+            new Category { Code = 1, Name = "עוגיות", IconRoute = "cookie" },
+            new Category { Code = 2, Name = "עוגות", IconRoute = "cake" },
+            new Category { Code = 3, Name = "קינוחים", IconRoute = "icecream" },
+            new Category { Code = 4, Name = "פטיפורים", IconRoute = "bakerydining" },
         };
-
-    // GET: api/<CategoryController>
     [HttpGet]
     public ActionResult<IEnumerable<Category>> Get()
     {

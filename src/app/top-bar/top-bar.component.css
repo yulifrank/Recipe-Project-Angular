@@ -1,4 +1,3 @@
-
 .mat-toolbar {
     background-color: #4646465b;
     color: white;
@@ -6,23 +5,20 @@
     justify-content: space-around;
 }
 
-.example-icon {
-    color: rgb(60, 38, 12);
+.centered-content {
+    display: flex;
+    align-items: center;
 }
 
-.favorite-icon {
-    color: rgb(255, 255, 255);
+.example-icon {
+    color: rgb(60, 38, 12);
 }
 
 .example-spacer {
     flex: 1 1 auto;
 }
 
-.mat-toolbar button {
-    margin: 0 8px;
-}
-
-.mat-toolbar a {
+.mat-toolbar button, .mat-toolbar a {
     margin: 0 8px;
     color: rgb(83, 54, 18);
 }
@@ -31,3 +27,8 @@
     margin-right: 4px;
 }
 
+.user-profile{
+    margin-top: -3%;
+    color: rgb(83, 54, 18);
+    margin-left: 2%;
+}

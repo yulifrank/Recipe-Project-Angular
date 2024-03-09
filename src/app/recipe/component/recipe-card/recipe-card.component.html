@@ -2,16 +2,14 @@
   <mat-card class="recipe-card">
     <mat-card-header>
       <!-- התמונה החדשה -->
-      <img mat-card-avatar src="../../../../assets/images/people/6-התנהגויות-אופייניות-של-אנשים-שעברו-ילדות-קשה.jpg" alt="Avatar Image">
+      <div mat-card-avatar class="usercircle">{{ createdByUsername }}</div>
       <mat-card-title>{{ recipe.recipeName }}</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <mat-card-subtitle> {{createdByUsername }}</mat-card-subtitle>
     </mat-card-header>
     <img  mat-card-image [src]="recipe.imageRoute" alt="תמונת מתכון">
     <mat-card-content>
       <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
+        
       </p>
     </mat-card-content>
     <div class="difficulty-icons">
@@ -27,7 +25,7 @@
       <button mat-button (click)="editRecipe()">עריכת מתכון</button>
 
       <div class="like-animation" [ngClass]="{ 'liked': isLiked }">
-        <mat-icon>favorite</mat-icon>
+        <mat-icon color="black">thumb_up</mat-icon>
       </div>
     </mat-card-actions>
   </mat-card>

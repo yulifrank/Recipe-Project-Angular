@@ -5,6 +5,7 @@ import { RecipeCardComponent } from './component/recipe-card/recipe-card.compone
 import { RecipesListComponent } from './component/recipes-list/recipes-list.component';
 import { RecipeAllDetailsComponent } from './component/recipe-all-details/recipe-all-details.component';
 import { AddRecipeComponent } from './component/add-recipe/add-recipe.component';
+import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.component';
 
 
 const RECIPE_ROUTES: Route[] = [
@@ -12,6 +13,8 @@ const RECIPE_ROUTES: Route[] = [
   { path: 'add', component:AddRecipeComponent },
 
   { path: 'recipes-list', component: RecipesListComponent },
+  { path: 'recipes-list/:id/edit', component: EditRecipeComponent,  canActivate: [
+  ] },
   { path: 'recipes-list/:id', component: RecipeAllDetailsComponent, canActivate: [
   ] },
 ]

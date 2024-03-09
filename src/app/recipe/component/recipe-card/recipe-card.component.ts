@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Recipe } from '../../../recipe.model';
 import { RecipeServiceService } from '../../../recipe-service.service';
+import { UserServiceService } from '../../../user-service.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-recipe-card',
@@ -14,24 +14,34 @@ export class RecipeCardComponent {
  recipe!: Recipe; 
   @Input() index !: number; // קבלת ה-index כקלט
   isLiked: boolean = false;
-  createdByUserCode!: number;
+  createdByUserCode: number;
+  createdByUsername: string;
 
-
-
-  constructor(private router: Router,private recipeService: RecipeServiceService) { }
+  constructor(private router: Router,private recipeService: RecipeServiceService,private userService: UserServiceService) { }
 
   ngOnInit(): void {
     this.recipeService.getRecipeById(this.index).subscribe({
       next: (res) => {
         this.recipe = res;
-        this.createdByUserCode = res.userCode; // השמת הקוד של המשתמש שיצר את המתכון
+        this.createdByUserCode = res.userCode;
+        this.userService.getUserById(this.createdByUserCode).subscribe({
+          next: (user) => {
+            console.log("user",user)
+            this.createdByUsername = user.name;
+            console.log("createdByUsername",this.createdByUsername)
+
+          },
+          error: (err) => {
+            console.log(err);
+          }
+        });
       },
       error: (err) => {
         console.log(err);
       }
-    })
-    
+    });
   }
+
   getDifficultyIcons(difficultyLevel: number): number[] {
     return Array(difficultyLevel).fill(0);
   }
@@ -42,14 +52,12 @@ export class RecipeCardComponent {
       this.isLiked = false;
     }, 1000); 
   }
-
-
   editRecipe() {
     const userCode = sessionStorage.getItem('userCode'); // משיכת קוד המשתמש מהזיכרון המקומי
   
     if (userCode && +userCode === this.createdByUserCode) { // המרת הערך של userCode למספר ובדיקה האם זהו אותו משתמש שיצר את המתכון
       // אם זהו אותו משתמש, מעבירים אותו לדף העריכה
-      this.router.navigate(['/recipe/edit', this.index]);
+      this.router.navigate([`recipe/recipes-list/${this.index}/edit`]);
     } else {
       // אם זה לא אותו משתמש, מציגים הודעה כי אין הרשאה
       Swal.fire({
@@ -59,9 +67,6 @@ export class RecipeCardComponent {
       });
     }
   }
-  
-  
-
   toAllDetails() {
     const username = sessionStorage.getItem('username'); // משיכת שם משתמש מהזיכרון המקומי
     const password = sessionStorage.getItem('password'); // משיכת סיסמה מהזיכרון המקומי

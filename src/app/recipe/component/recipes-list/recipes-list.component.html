@@ -1,3 +1,5 @@
-<div  id="recipe-list">
-    <app-recipe-card *ngFor="let recipe of recipes; let i=index"[index]="i" ></app-recipe-card>
-  </div>
+<div class="recipes-list" id="recipe-list">
+  <app-recipe-card *ngFor="let recipe of filteredRecipes; let i=index" [index]="i"></app-recipe-card>
+</div>
+
+

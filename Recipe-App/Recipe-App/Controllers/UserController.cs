@@ -12,18 +12,18 @@ namespace Recipe_App.Controllers
             new User
             {
                 Code = 1,
-                Name = "John",
-                Address = "123 Main St",
-                Email = "john@example.com",
-                Password = "password123"
+                Name = "שרי שניצר",
+                Address = "רחוב בעל התניא",
+                Email = "s@gmail.com.com",
+                Password = "123456"
             },
             new User
             {
                 Code = 2,
-                Name = "Jane Smith",
-                Address = "456 Oak St",
-                Email = "jane@example.com",
-                Password = "securepass"
+                Name = "יעל פרנק",
+                Address = "שטרסר 2 בני ברק",
+                Email = "yaelf2278@gmail.com",
+                Password = "123456"
             }
         };
 

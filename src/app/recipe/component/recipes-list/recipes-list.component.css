@@ -5,5 +5,14 @@
     flex-wrap: wrap;
     margin-top: 4%;
     width: 80%;
+}
 
+.slider-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 20%; /* כדי שהסרגל יוצג בצד ימין, עליך להגדיר את הרוחב שלו כ-100% */
+margin-top: 0%;}
+.recipe-page{
+    display: flex;
+    flex-direction: row;
 }
