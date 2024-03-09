@@ -29,10 +29,8 @@ import { MatSliderModule } from '@angular/material/slider';
     CommonModule, RecipeRoutingModule,MatCardModule, MatSelectModule,MatButtonModule,MatIconModule,MatFormField,    MatInputModule,
     MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,FormsModule ,
     NgxSliderModule,MatSliderModule
-
-
   ],
-  exports: [   CommonModule,RecipeRoutingModule]
+  exports: [CommonModule,RecipeRoutingModule]
 
 
 })

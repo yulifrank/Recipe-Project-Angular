@@ -4,19 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { UserServiceService } from '../user-service.service';
+import { UserServiceService } from '../../../user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule,HttpClientModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatCardModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -72,7 +65,7 @@ showRotatingIcon=false
             this.showRotatingIcon = true; // הצגת האייקון המסתובב
   
             setTimeout(() => {
-              this.route.navigate(['/register'], { queryParams: { name: username } });
+              this.route.navigate(['/user/register'], { queryParams: { name: username } });
             }, 2000); // אם רוצים שהאנימציה תמשך שתי שניות
           }
         },

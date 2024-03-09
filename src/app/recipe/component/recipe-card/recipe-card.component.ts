@@ -77,7 +77,12 @@ export class RecipeCardComponent {
       this.router.navigate(['recipe/recipes-list', this.index], { queryParams: { index: this.index } });      } 
     else {
       console.log('Username or password not found in local storage.');
-      this.router.navigate(['../login']);
+      Swal.fire({
+        icon: 'error',
+        title: 'לא מורשה',
+        text: 'עליך להרשם כדי לראות את המתכון'
+      });
+      this.router.navigate(['user/login']);
     }
 }
 }

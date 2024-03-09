@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { LoginComponent } from "./login/login.component";
+import { LoginComponent } from "./user/component/login/login.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
 
 
@@ -10,7 +10,7 @@ import { TopBarComponent } from "./top-bar/top-bar.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule,RouterOutlet, LoginComponent, TopBarComponent,RouterModule]
+    imports: [CommonModule,RouterOutlet, TopBarComponent,RouterModule]
 })
 export class AppComponent {
   title = 'RecipeProject';

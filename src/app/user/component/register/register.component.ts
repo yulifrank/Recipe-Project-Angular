@@ -3,19 +3,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormControl } from '@angular/forms';
-import { passwordValidatorFn } from "../password-validator";
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
-import { UserServiceService } from '../user-service.service';
+import { passwordValidatorFn } from "../../../password-validator";
+
+import { UserServiceService } from '../../../user-service.service';
 import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-register',
-  standalone: ​​true,
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatCardModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })

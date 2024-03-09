@@ -31,7 +31,7 @@ export class AddRecipeComponent implements OnInit {
         this.showRotatingIcon = true; // הצגת האייקון המסתובב
 
         setTimeout(() => {
-          this.router.navigate(['/login']);
+          this.router.navigate(['/user/login']);
 
         }, 2000); // אם רוצים שהאנימציה תמשך שתי שניות
       }

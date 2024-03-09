@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JgdKVdivkmchFf7nyDKfAX/aVE3AlRjbcMN9u/ltO/32iRbUuaPZEnwQrsM8l2feAf4KK/SCTJIvBlvVltYf4A==",
+  "dgSpecHash": "F5XoegLe8QFv91ZfXTajnM+U47OJT79DmKPxWncKpeFE1Cpf4OL4jPcMGOBrx0DvkyK8YUiRfCOX8PN0D6vKEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Documents\\תכנות שנה ב\\אנגולר\\פרויקט אנגולר יעל & שרי\\RecipeProject\\Recipe-App\\Recipe-App\\Recipe-App.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Documents\\תכנות שנה ב\\אנגולר\\פרויקט\\Recipe-Project-Angular\\Recipe-App\\Recipe-App\\Recipe-App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -10,7 +10,11 @@
     "C:\\Users\\user1\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
-    "C:\\Users\\user1\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+    "C:\\Users\\user1\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.16\\microsoft.netcore.app.host.win-x64.7.0.16.nupkg.sha512"
   ],
   "logs": []
 }

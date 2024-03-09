@@ -11,7 +11,6 @@ import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.compone
 const RECIPE_ROUTES: Route[] = [
   { path: '', redirectTo: 'recipes-list', pathMatch: 'full' },
   { path: 'add', component:AddRecipeComponent },
-
   { path: 'recipes-list', component: RecipesListComponent },
   { path: 'recipes-list/:id/edit', component: EditRecipeComponent,  canActivate: [
   ] },
