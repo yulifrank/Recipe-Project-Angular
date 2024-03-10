@@ -4,6 +4,7 @@ import { RecipeServiceService } from '../../../recipe-service.service';
 import { UserServiceService } from '../../../user-service.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { DurationPipe } from '../../duration-pipe.pipe';
 
 @Component({
   selector: 'app-recipe-card',

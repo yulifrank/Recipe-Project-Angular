@@ -19,7 +19,7 @@
         <div class="difficulty-icons">
           <mat-icon *ngFor="let i of getDifficultyIcons(recipe.difficultyLevel)" class="difficulty-icon">star_rate</mat-icon>
         </div>
-        <div>{{recipe.preparationTimeInMinutes}}</div>
+        <div>{{ recipe.preparationTimeInMinutes | duration }}</div>
       </div>
     </div>
     <mat-card-actions>

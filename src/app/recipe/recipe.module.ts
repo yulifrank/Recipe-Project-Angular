@@ -23,6 +23,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DurationPipe } from './duration-pipe.pipe';
 
 
 
@@ -31,7 +32,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
-  declarations: [RecipesListComponent,RecipeCardComponent,AddRecipeComponent,RecipeAllDetailsComponent,EditRecipeComponent],
+  declarations: [RecipesListComponent,RecipeCardComponent,AddRecipeComponent,RecipeAllDetailsComponent,EditRecipeComponent,DurationPipe],
   imports: [
     CommonModule, RecipeRoutingModule,MatCardModule, MatSelectModule,MatButtonModule,MatIconModule,MatFormField,    MatInputModule,
     MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,FormsModule ,SidebarModule,
