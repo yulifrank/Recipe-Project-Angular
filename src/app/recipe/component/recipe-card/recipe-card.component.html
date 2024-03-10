@@ -2,9 +2,11 @@
   <mat-card class="recipe-card">
     <mat-card-header>
       <!-- התמונה החדשה -->
-      <div mat-card-avatar class="usercircle">{{ createdByUsername.charAt(0) }}</div>
+      <div *ngIf="createdByUsername" mat-card-avatar class="usercircle">{{ createdByUsername[0] }}</div>
       <mat-card-title>{{ recipe.recipeName }}</mat-card-title>
       <mat-card-subtitle> {{createdByUsername }}</mat-card-subtitle>
+      <mat-card-subtitle> {{recipe.categoryCode }}</mat-card-subtitle>
+
     </mat-card-header>
     <img  mat-card-image [src]="recipe.imageRoute" alt="תמונת מתכון">
     <mat-card-content>
@@ -17,6 +19,7 @@
         <div class="difficulty-icons">
           <mat-icon *ngFor="let i of getDifficultyIcons(recipe.difficultyLevel)" class="difficulty-icon">star_rate</mat-icon>
         </div>
+        <div>{{recipe.preparationTimeInMinutes}}</div>
       </div>
     </div>
     <mat-card-actions>

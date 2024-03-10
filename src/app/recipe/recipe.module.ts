@@ -17,7 +17,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeAllDetailsComponent } from './component/recipe-all-details/recipe-all-details.component';
 import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
-import { MatSliderModule } from '@angular/material/slider';
+import { MatSidenavModule } from '@angular/material/sidenav';
+// import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import {MatSliderModule} from '@angular/material/slider';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 
 
 
@@ -27,8 +34,8 @@ import { MatSliderModule } from '@angular/material/slider';
   declarations: [RecipesListComponent,RecipeCardComponent,AddRecipeComponent,RecipeAllDetailsComponent,EditRecipeComponent],
   imports: [
     CommonModule, RecipeRoutingModule,MatCardModule, MatSelectModule,MatButtonModule,MatIconModule,MatFormField,    MatInputModule,
-    MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,FormsModule ,
-    NgxSliderModule,MatSliderModule
+    MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,FormsModule ,SidebarModule,
+     MatSidenavModule,MatSliderModule,ButtonModule,MatCheckboxModule
   ],
   exports: [CommonModule,RecipeRoutingModule]
 

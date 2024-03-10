@@ -1,18 +1,47 @@
-.bacgroundImage{
-    
- width: 10%;
-    width: 100vw; /* השתמשתי ב- vw במקום ב- % כדי לקבוע את הרוחב ביחס לרוחב של החלון ולא לעמודה */
-    height: 100vh; /* השתמשתי ב- vh במקום ב- % כדי לקבוע את הגובה ביחס לגובה של החלון ולא לעמודה */
-    background-size: cover;
-    background-position: center;
-    position: absolute; /* קביעת מיקום קבוע לתמונה */
-    top: 0;
-    left: 0;
-    opacity: 0.5; /* שקיפות של 50% - אפשר לשנות את הערך לפי המבוקש */
-    z-index: -1; /* שכבה אחורית מאחורי התוכן */
+.center-img {
+    display: block;
+ margin: auto;
+    height: 90%;
+    width: 70%;
 }
-.recipeTitle{
-font-size: 1000%;
-color: rgb(53, 25, 12);
-margin: 20%;
+.allpage{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: -4;
+    height: 100vw;
+margin-top: 2.5%;}
+.carousel-control-next{
+    background-color: black;
+}
+#slide-ngb-slide-1{
+    background-color: black !important;
+}
+.carousel-inner {
+    background-color: black; /* רקע של התמונות */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: black; /* צבע הכפתורים של החיצים */
+    color: white; /* צבע הטקסט של החיצים */
+}
+
+/* CSS עבור צבע החיצים ב-Carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: black; /* צבע רקע שחור */
+    color: white; /* צבע טקסט לבן */
+}
+
+/* עיצוב נוסף עבור חיצים שהם חשים כאשר עוברים עליהם */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: darkgrey; /* צבע רקע אפור כהה */
+    color: white; /* צבע טקסט לבן */
+}
+.carousel-control-next-icon,.carousel-control-next{
+    color: black;
+}
+#ngb-carousel-0-next{
+    color: black;
 }

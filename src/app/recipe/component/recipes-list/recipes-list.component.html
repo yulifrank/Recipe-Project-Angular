@@ -1,5 +1,56 @@
+<p-sidebar [(visible)]="sidebarVisible2" position="right" class="custom-sidebar">
+  <div id="time-slider" class="slider">
+    <h3 class="h-filter">Preparation time</h3>
+    <div>
+      <mat-slider class="slider"
+                  orientation="vertical"
+                  [color]="'accent'"
+                  [style.width.vw]="12"
+                  class="example-margin"
+                  [disabled]="false"
+                  [max]="100"
+                  [min]="0"
+                  [step]="1"
+                  [discrete]="true"
+                  [showTickMarks]="false"
+                  (input)="filterByTime(value1)">
+        <input matSliderThumb [(ngModel)]="value1" #slider>
+      </mat-slider>
+    </div>
+  </div>
+  <div id="level-slider" class="slider">
+    <h3 class="h-filter">Difficulty level</h3>
+    <div>
+      <mat-slider class="slider"
+                  orientation="vertical"
+                  [color]="'accent'"
+                  [style.width.vw]="12"
+                  class="example-margin"
+                  [disabled]="disabled"
+                  [max]="5"
+                  [min]="1"
+                  [step]="step"
+                  [discrete]="thumbLabel"
+                  [showTickMarks]="showTicks"
+                  (input)="filterByDifficulty(value)">
+        <input matSliderThumb [(ngModel)]="value" #slider>
+      </mat-slider>
+    </div>
+  </div>
+  <section class="categories-section">
+    <h4 class="h-filter">Select Category</h4>
+    <p>Cakes <mat-checkbox (change)="filterByCategory(1)"></mat-checkbox></p>
+    <p>Cookies <mat-checkbox (change)="filterByCategory(2)"></mat-checkbox></p>
+    <p>Desserts <mat-checkbox (change)="filterByCategory(3)"></mat-checkbox></p>
+    <p>Petticoats <mat-checkbox (change)="filterByCategory(4)"></mat-checkbox></p>
+  </section>
+</p-sidebar>
+
+<button mat-button id="buttonSideBar" (click)="sidebarVisible2 = true" *ngIf="sidebarVisible2 !== true">
+  <mat-icon color="black">filter_alt</mat-icon>
+  Filter
+</button>
+
 <div class="recipes-list" id="recipe-list">
-  <app-recipe-card *ngFor="let recipe of filteredRecipes; let i=index" [index]="i"></app-recipe-card>
+  <app-recipe-card *ngFor="let recipe of filteredRecipes; let i=index" [index]="recipe.recipeCode"></app-recipe-card>
 </div>
-
-

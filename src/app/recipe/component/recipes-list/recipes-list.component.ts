@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { RecipeServiceService } from '../../../recipe-service.service';
 import { Recipe } from '../../../recipe.model';
@@ -11,16 +10,17 @@ import { Recipe } from '../../../recipe.model';
 export class RecipesListComponent implements OnInit {
   recipes: Recipe[] = [];
   filteredRecipes: Recipe[] = [];
-  filterOptions = {
-    category: '',
-    preparationTime: '',
-    difficultyLevel: 1 // Default difficulty level
-  };
+  value: number = 0; // Difficulty level filter value
+  value1: number = 0; // Preparation time filter value
+  selectedCategories: number[] = []; // Selected categories for filtering
+  sidebarVisible2: boolean = false;
+  disabled = false;
+  max = 5;
+  min = 0;
+  showTicks = true;
+  step = 0;
+  thumbLabel = true;
 
-  minValue: number = 1;
-  maxValue: number = 8;
-  value: number = 5;
-  
   constructor(private recipeService: RecipeServiceService) { }
 
   ngOnInit(): void {
@@ -34,16 +34,36 @@ export class RecipesListComponent implements OnInit {
     });
   }
 
-  // Function to filter recipes based on filter options
+  // Function to filter recipes based on preparation time
+  filterByTime(v: number): void {
+    this.value1 = v;
+    this.filterRecipes();
+  }
+
+  // Function to filter recipes based on difficulty level
+  filterByDifficulty(v: number): void {
+    this.value = v;
+    this.filterRecipes();
+  }
+
+  // Function to filter recipes based on selected categories
+  filterByCategory(category: number): void {
+    const index = this.selectedCategories.indexOf(category);
+    if (index !== -1) {
+      this.selectedCategories.splice(index, 1);
+    } else {
+      this.selectedCategories.push(category);
+    }
+    this.filterRecipes();
+  }
+
+  // Function to apply all filters and update filteredRecipes
   filterRecipes(): void {
     this.filteredRecipes = this.recipes.filter(recipe => {
-      let passDifficultyLevel = true;
-  
-      // Check if difficulty level filter is applied
-      passDifficultyLevel = recipe.difficultyLevel >= this.minValue && recipe.difficultyLevel <= this.maxValue;
-  
-      // Return true if all filters pass
-      return passDifficultyLevel;
+      const timeFilter = this.value1 === 0 || recipe.preparationTimeInMinutes <= this.value1;
+      const difficultyFilter = this.value === 0 || recipe.difficultyLevel === this.value;
+      const categoryFilter = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryCode);
+      return timeFilter && difficultyFilter && categoryFilter;
     });
   }
 }

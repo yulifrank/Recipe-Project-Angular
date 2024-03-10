@@ -1,9 +1,12 @@
 .mat-toolbar {
-    background-color: #4646465b;
+    background-color: #f5f2ed;
     color: white;
     display: flex;
     justify-content: space-around;
+    height: 6vw;
+
 }
+
 
 .centered-content {
     display: flex;
@@ -11,7 +14,7 @@
 }
 
 .example-icon {
-    color: rgb(60, 38, 12);
+    color: rgb(255, 17, 164);
 }
 
 .example-spacer {
@@ -20,15 +23,26 @@
 
 .mat-toolbar button, .mat-toolbar a {
     margin: 0 8px;
-    color: rgb(83, 54, 18);
+    color: rgb(19, 18, 19);
 }
 
 .mat-toolbar a mat-icon {
     margin-right: 4px;
+    color: rgb(179, 56, 82);
 }
 
 .user-profile{
     margin-top: -3%;
-    color: rgb(83, 54, 18);
+    color: rgb(179, 56, 82);
     margin-left: 2%;
 }
+.img1{
+    width:6%;
+position: fixed;
+top: 0.2%;
+right: 4vw;
+}
+
+
+
+
