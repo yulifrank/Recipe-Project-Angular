@@ -24,6 +24,21 @@ namespace Recipe_App.Controllers
                 Address = "שטרסר 2 בני ברק",
                 Email = "yaelf2278@gmail.com",
                 Password = "123456"
+            },
+              new User
+            {
+                Code = 3,
+                Name = "עדי בר",
+                Address = "רחוב אבא הילל 5",
+                Email = "yyy@gmail.com",
+                Password = "adi"
+            },  new User
+            {
+                Code = 4,
+                Name = "שירה לב",
+                Address = "רמת גן",
+                Email = "shira@gmail.com",
+                Password = "shira"
             }
         };
 

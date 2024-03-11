@@ -12,7 +12,7 @@ namespace Recipe_App.Controllers
             new Category { Code = 1, Name = "עוגיות", IconRoute = "cookie" },
             new Category { Code = 2, Name = "עוגות", IconRoute = "cake" },
             new Category { Code = 3, Name = "קינוחים", IconRoute = "icecream" },
-            new Category { Code = 4, Name = "פטיפורים", IconRoute = "bakerydining" },
+            new Category { Code = 4, Name = "פטיפורים", IconRoute = "cake" },
         };
     [HttpGet]
     public ActionResult<IEnumerable<Category>> Get()
