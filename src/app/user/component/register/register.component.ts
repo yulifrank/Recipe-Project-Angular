@@ -7,6 +7,8 @@ import { passwordValidatorFn } from "../../../password-validator";
 
 import { UserServiceService } from '../../../user-service.service';
 import { switchMap } from 'rxjs';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-register',
@@ -70,12 +72,19 @@ export class RegisterComponent implements OnInit {
     this.hide = !this.hide;
   }
 
+
+  // בתוך הפונקציה onSubmit()
   onSubmit() {
     this.userService.getAllUsers().pipe(
       switchMap(users => {
         this.existingUser = users.some(user => user.email === this.registerForm.value.Email);
         if (this.existingUser) {
-          alert('User already exists! Please choose a different name.');
+          Swal.fire({
+            icon: 'error',
+            title: 'שגיאה',
+            text: '/המשתמש כבר קיים! בבקשה בחר שם משתמש אחר./מייל אחר',
+            confirmButtonColor: 'rgb(179, 56, 82)'
+          });
           return [];
         } else {
           const username = this.registerForm.get('Name')?.value;
@@ -84,18 +93,21 @@ export class RegisterComponent implements OnInit {
           sessionStorage.setItem('password', password);
           sessionStorage.setItem('userCode', JSON.stringify(this.nextUserCode));
           const newUser = { ...this.registerForm.value, Code: this.nextUserCode };
-          alert('User created successfully!');
+          Swal.fire({
+            icon: 'success',
+            title: 'ברוך הבא נרשמת בהצלחה! ',
+            confirmButtonColor: 'rgb(179, 56, 82)'
+          });
           return this.userService.createUser(newUser);
-
         }
       })
     ).subscribe(() => {
       if (this.existingUser) {
         // אם המשתמש קיים - ננווט לדף אחר
-    } else {
-     this.router.navigate(['/recipe/recipes-list']);
-
-    }
+      } else {
+        this.router.navigate(['/recipe/recipes-list']);
+      }
     });
   }
+  
 }

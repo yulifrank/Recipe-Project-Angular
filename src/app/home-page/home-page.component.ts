@@ -10,13 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-  // images: string[] = [
-  //   '../../assets/images/recipe-images/1.jpg',
-  //   '../../assets/images/recipe-images/2.jpg',
-  //   '../../assets/images/recipe-images/3.jpg',
-  //   '../../assets/images/recipe-images/4.jpg',
-  //   '../../assets/images/recipe-images/5.jpg'
-  // ];
+
   images = [1, 2, 3, 4, 5, ].map((n) => `../../assets/images/recipe-images/${n}.jpg`);
 
 	paused = false;
@@ -48,4 +42,7 @@ export class HomePageComponent {
 			this.togglePaused();
 		}
 	}
+  handleMaterialButtonClick(): void {
+  
+  }
 }

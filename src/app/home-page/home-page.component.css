@@ -1,47 +1,42 @@
 .center-img {
     display: block;
- margin: auto;
+    margin: auto;
     height: 90%;
     width: 70%;
 }
-.allpage{
+
+.allpage {
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: -4;
-    height: 100vw;
-margin-top: 2.5%;}
-.carousel-control-next{
-    background-color: black;
-}
-#slide-ngb-slide-1{
-    background-color: black !important;
-}
-.carousel-inner {
-    background-color: black; /* רקע של התמונות */
+    margin-top: 5%;
+color: black;
+background-color: #f5f2ed;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: black; /* צבע הכפתורים של החיצים */
-    color: white; /* צבע הטקסט של החיצים */
+    background-color: transparent; /* צבע רקע שקוף */
+    color: black; /* צבע טקסט שחור */
+    border: none; /* הסרת גבולות */
+    font-size: 2rem; /* גודל טקסט */
+    margin-top: -50px; /* מיקום למעלה קצת */
 }
 
-/* CSS עבור צבע החיצים ב-Carousel */
+/* סגנון עבור החצים */
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: black; /* צבע רקע שחור */
-    color: white; /* צבע טקסט לבן */
+    background-color: black; /* צבע רקע של החצים */
+    color: white; /* צבע הטקסט של החצים */
+    opacity: 0.5; /* שקיפות של החצים כאשר העכבר לא מעליהם */
 }
 
-/* עיצוב נוסף עבור חיצים שהם חשים כאשר עוברים עליהם */
+/* סגנון עבור החצים כאשר העכבר מעליהם */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    background-color: darkgrey; /* צבע רקע אפור כהה */
-    color: white; /* צבע טקסט לבן */
+    background-color: black; /* צבע רקע של החצים */
+    color: white; /* צבע הטקסט של החצים */
+    opacity: 0.9; /* שקיפות של החצים כאשר העכבר מעליהם */
 }
-.carousel-control-next-icon,.carousel-control-next{
-    color: black;
-}
-#ngb-carousel-0-next{
-    color: black;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black !important; /* Change this to the color you desire */
 }

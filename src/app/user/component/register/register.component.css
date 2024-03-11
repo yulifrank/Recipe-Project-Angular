@@ -21,35 +21,32 @@
 }
 
 .login-content {
-  color: rgb(179, 110, 25);
+  color: rgb(179, 56, 82);;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  color: rgb(179, 110, 25);
+  color: rgb(179, 56, 82);;
 }
 
 .form-field {
   margin-bottom: 20px;
-  color: rgb(179, 110, 25);
+  color: rgb(179, 56, 82);;
 }
 
 .submit-button {
   margin-top: 20px;
-  color: rgb(179, 110, 25);
+  color: rgb(179, 56, 82);;
 }
 
 .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
   background-color: rgb(112, 60, 60) !important; /* Color of the error indicator */
 }
 
-::ng-deep .form-field.mat-focused .mat-form-field-outline .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
-  color: yellow; /* Color of the focused error indicator */
-}
 
 .red {
-  color: rgb(255, 0, 0); /* Red color for error messages */
+  color: rgb(179, 56, 82); /* Red color for error messages */
 }
 
 .green {

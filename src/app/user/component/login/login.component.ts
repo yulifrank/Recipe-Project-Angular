@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { UserServiceService } from '../../../user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { User } from '../../../user.model';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +35,7 @@ showRotatingIcon=false
       const password = this.loginForm.get('password')?.value;
   
       this.userService.getAllUsers().subscribe(
-        (users: any[]) => {
+        (users: User[]) => {
           console.log("users",users)
           console.log("this: ",username)
           this.userExists = users.some(user => user.name === username);
@@ -43,7 +44,6 @@ showRotatingIcon=false
               // שמירת פרטי הגולש ב-SessionStorage
               sessionStorage.setItem('username', username);
               sessionStorage.setItem('password', password);
-              // שמירת קוד היוזר ב-SessionStorage
               sessionStorage.setItem('userCode', JSON.stringify(users.find(user => user.name === username && user.password === password).code));
             
               Swal.fire({

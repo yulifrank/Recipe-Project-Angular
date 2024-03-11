@@ -1,9 +1,14 @@
 .mat-toolbar {
+    
     background-color: #f5f2ed;
     color: white;
     display: flex;
     justify-content: space-around;
     height: 6vw;
+    
+    position: fixed;
+    top: 0%;
+    z-index: 200;
 
 }
 
@@ -14,7 +19,7 @@
 }
 
 .example-icon {
-    color: rgb(255, 17, 164);
+    color: rgb(179, 56, 82);
 }
 
 .example-spacer {
@@ -41,6 +46,7 @@
 position: fixed;
 top: 0.2%;
 right: 4vw;
+z-index: 206;
 }
 
 

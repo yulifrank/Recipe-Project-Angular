@@ -5,7 +5,7 @@ const passwordValidator = (): ValidatorFn => {
     const value: string = control.value || ''; // אם הערך אינו מוגדר, נשתמש במחרוזת ריקה
 
     // בדיקת אורך הסיסמה
-    if (value.length < 6) {
+    if (value.length < 4) {
       return { minLength: true }; // אם הסיסמה קצרה מ-6 תווים, נחזיר הודעת שגיאה
     }
 

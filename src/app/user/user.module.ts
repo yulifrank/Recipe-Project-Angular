@@ -17,8 +17,8 @@ import { UserRoutingModule } from './user-routing.module';
 
 
 @NgModule({
-  declarations: [LoginComponent,RegisterComponent,LogoutComponent],
-  imports: [CommonModule,UserRoutingModule, ReactiveFormsModule,HttpClientModule, MatFormFieldModule,MatIcon, MatInputModule, MatButtonModule, MatIconModule, MatCardModule],
+  declarations:[LoginComponent,RegisterComponent,LogoutComponent],
+  imports:     [CommonModule,UserRoutingModule, ReactiveFormsModule,HttpClientModule, MatFormFieldModule,MatIcon, MatInputModule, MatButtonModule, MatIconModule, MatCardModule],
   exports: [CommonModule,UserRoutingModule]
 })
 export class UserModule { }

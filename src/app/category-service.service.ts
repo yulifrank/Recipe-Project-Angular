@@ -33,7 +33,11 @@ export class CategoryServiceService {
     return this.http.delete<Category>(`${this.apiUrl}/${code}`);
 
 
-
     
+  }
+  
+  getCategoryByCode(id: number): Observable<Category>
+  {
+    return this.http.get<Category>(`${this.apiUrl}/${id}`);
   }
 }

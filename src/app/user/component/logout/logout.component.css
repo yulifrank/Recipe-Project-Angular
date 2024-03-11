@@ -16,4 +16,19 @@
   :host {
     background-color: #f5f5f5; /* רקע אפור נינוח */
   }
+  .logout-button {
+    font-size: 24px; /* גודל הגופן */
+    padding: 20px 40px; /* רווחים בין התוכן לקצוות הכפתור */
+    border-radius: 15px; /* פינות מעוגלות */
+    background-color: rgb(179, 56, 82);
+    width: 30%;
+  }
+  
+  .center-content {
+    text-align: center; /* מיקוד הכפתור במרכז */
+  }
+  
+  mat-icon {
+    margin-right: 10px; /* מרווחים בין הסמל לטקסט */
+  }
   
