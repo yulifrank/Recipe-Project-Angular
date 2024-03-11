@@ -20,6 +20,7 @@ export class RecipesListComponent implements OnInit {
   showTicks = true;
   step = 0;
   thumbLabel = true;
+  recipeNameFilter: string = '';
 
   constructor(private recipeService: RecipeServiceService) { }
 
@@ -33,6 +34,21 @@ export class RecipesListComponent implements OnInit {
       this.filteredRecipes = [...recipes]; // Copy all recipes to filtered recipes initially
     });
   }
+  filterByName(): void {
+    this.filterRecipes();
+  }
+
+  filterRecipes(): void {
+    this.filteredRecipes = this.recipes.filter(recipe => {
+      const timeFilter = this.value1 === 0 || recipe.preparationTimeInMinutes <= this.value1;
+      const difficultyFilter = this.value === 0 || recipe.difficultyLevel === this.value;
+      const categoryFilter = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryCode);
+      const nameFilter = this.recipeNameFilter === '' || recipe.recipeName.toLowerCase().includes(this.recipeNameFilter.toLowerCase());
+      return timeFilter && difficultyFilter && categoryFilter && nameFilter;
+    });
+  }
+  
+  
 
   // Function to filter recipes based on preparation time
   filterByTime(v: number): void {
@@ -58,12 +74,12 @@ export class RecipesListComponent implements OnInit {
   }
 
   // Function to apply all filters and update filteredRecipes
-  filterRecipes(): void {
-    this.filteredRecipes = this.recipes.filter(recipe => {
-      const timeFilter = this.value1 === 0 || recipe.preparationTimeInMinutes <= this.value1;
-      const difficultyFilter = this.value === 0 || recipe.difficultyLevel === this.value;
-      const categoryFilter = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryCode);
-      return timeFilter && difficultyFilter && categoryFilter;
-    });
-  }
+  // filterRecipes(): void {
+  //   this.filteredRecipes = this.recipes.filter(recipe => {
+  //     const timeFilter = this.value1 === 0 || recipe.preparationTimeInMinutes <= this.value1;
+  //     const difficultyFilter = this.value === 0 || recipe.difficultyLevel === this.value;
+  //     const categoryFilter = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryCode);
+  //     return timeFilter && difficultyFilter && categoryFilter;
+  //   });
+  // }
 }

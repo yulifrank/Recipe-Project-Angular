@@ -6,6 +6,8 @@
   border-radius: 10px;
   direction: rtl;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  margin-top: 2%;
+
 }
 
 .title {
@@ -36,7 +38,7 @@ button.mat-raised-button {
   margin-top: 20px;
 }
 .all{
-  background-image: url('../../../../assets/images/bacground/תמונת\ רקע2.jpg');
+  background-image: url('../../../../assets/images/bacground/3.jpg');
   background-size: cover; /* כדי להתאים את התמונה לגודל של החלון */
   background-attachment: fixed; /* כדי להשאיר את התמונה במקום כאשר ממסך נגללים */
   background-position: center center; /* כדי למקד את התמונה באמצע הדף */

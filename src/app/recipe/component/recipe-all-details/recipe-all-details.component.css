@@ -1,6 +1,199 @@
 .alldetails{
-    width: 60%;
+    width: 100%;
     margin: 20%;
     margin-top: 5%;
     direction: rtl;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
+
+.recipe-container {
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw;
+    margin-top: 10%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin-right: 0%;  
+  width: 100%;   
+
+  }
+  .recipe-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  
+  }
+  .recipe-details{
+    width: 37%;
+    background-color: #cc5861;
+    z-index: 100;
+    display: flex;
+flex-direction: column;
+}
+  .recipe-name{
+    font-size: 4vw;
+    margin-top: 4vw;
+    margin-left: 1vw;
+    color: #ebe8e5;
+  }
+  .recipr-img{
+    width: 70%;
+  
+  }
+  
+  
+  .recipe-ingredients,
+  .recipe-instructions {
+    margin-top: 20px;
+  }
+  
+  .recipe-ingredients h2,
+  .recipe-instructions h2 {
+    color: #000;
+    font-size: 20px;
+  }
+  
+  .recipe-ingredients ul,
+  .recipe-instructions ol {
+    list-style-type: none;
+    margin-left: 30%;
+    text-align: center;
+  }
+  
+  .recipe-ingredients li,
+  .recipe-instructions li {
+    margin-bottom: 10px;
+    margin-left: 0%;
+    text-align: right;
+    direction: rtl;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+    
+  }
+  
+  .recipe-instructions ol {
+    counter-reset: step-counter;
+  }
+  
+  .recipe-instructions li {
+    counter-increment: step-counter;
+  }
+  
+  .recipe-instructions li::before {
+    content: counter(step-counter) ".";
+    margin-right: 5px;
+    
+    color: #ff007f; /* pink */
+  }
+  
+  .list-group {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+  
+  .list-group-item {
+    /* text-align: center; */
+    border-left:  0.3vw solid #cc5861;
+    font-size: 1.5vw;
+    width: 18%;
+    height: 10vw;
+    background-color: #f5f2ed;
+    padding-top: 3%;
+  
+  
+  }
+  #list-group-item4{
+    border-left:  0vw solid #ffffff00;
+  }
+  
+  .list-group-item-h3 {
+    /* text-align: center; */
+    font-size: 1.5vw;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .recipename{
+    font-size: 100px;
+    color: #100f0f6b;
+    direction: rtl;
+    
+  }
+  .allitems{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .recipealldetails{
+    margin-right: 25%;
+  }
+  .usercircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* ליצירת עיגול */
+    background-color: rgb(0, 0, 0); /* רקע לבן */
+    color: rgb(255, 255, 255); /* צבע טקסט שחור */
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* מרווח מימין */
+    padding: 1%;
+    align-items: center;
+  }
+  .list-h2{
+    margin-bottom: 10px;
+    margin-left: 0%;
+    text-align: right;
+    direction: rtl;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+  }
+  .usercircle1{
+    background-color:  #f5f2ed;
+    color: #cc5861;
+    width: 70px;
+    height: 70px;
+    margin-top: 5%;
+    margin-left: 25vw;
+
+
+
+  }
+  .recipe-difficulty-time{
+    margin-top: 10%;
+    display: flex;
+flex-direction: column;
+
+  }
+  .recipe-difficulty-time {
+    display: flex;
+    justify-content: space-between; /* ייחוד הרווח בין האלמנטים */
+    align-items: center; /* ייחוד היישור של האלמנטים לאורך ציר ה-Y */
+  }
+  
+  .recipe-difficulty-time .detail {
+    display: inline-block; /* עשויים להיות אלמנטים בתוך ה-DIV שירצו להיות יחידים */
+    margin-right: 10px; /* רווח בין הפרטים */
+    margin-top: 10%;
+  }
+  
+  .category-details {
+    display: flex;
+    align-items: center; /* ייחוד היישור של האייקון והטקסט */
+    
+  }
+  
+  .category-details mat-icon {
+    margin-right: 5px; /* רווח בין האייקון לטקסט */
+  }
+  .sof{
+    font-size: 100px;    
+    margin-left: 50%;
+    color: #cc5861;
+    margin-top: 10%;
+    
+    }
+  

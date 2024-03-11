@@ -63,7 +63,7 @@
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
-            <button mat-raised-button color="primary" type="button" (click)="addStep()">הוסף שלב הכנה</button>
+            <button mat-raised-button color="pink" type="button" (click)="addStep()">הוסף שלב הכנה</button>
         </div>
 
         <div formArrayName="ingredients" class="sub-form">
@@ -76,7 +76,7 @@
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
-            <button mat-raised-button color="primary" type="button" (click)="addIngredients()">הוסף רכיב</button>
+            <button mat-raised-button color="pink" type="button" (click)="addIngredients()">הוסף רכיב</button>
         </div>
 
         <div class="form-group">
@@ -86,13 +86,13 @@
             </mat-form-field>
         </div>
 
-        <button mat-raised-button color="primary" type="submit">שמור</button>
+        <button mat-raised-button color="pink" type="submit">שמור</button>
     </form>
 </div>
 </div>
 </div>
 <div class="rotating-icon-container" *ngIf="showRotatingIcon">
     <mat-icon class="rotating-icon">cached</mat-icon>
-    <p>אינך רשום עדיין במערכת</p>
-    <p>הינך מועבר להרשמה</p>
+    <p>אינך מחובר במערכת</p>
+    <p>הינך מועבר להתחברות</p>
   </div>

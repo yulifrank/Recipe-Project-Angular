@@ -52,7 +52,7 @@ export class AddRecipeComponent implements OnInit {
       ingredients: this.formBuilder.array([]),
       preparationSteps: this.formBuilder.array([]),
       userCode: ['3', Validators.required],
-      imageRoute: ['../../../../assets/images/recipe-images/Lavender-macaron-7.jpg', Validators.required]
+      imageRoute: ['../../../../assets/images/recipe-images/7.jpg', Validators.required]
     });
   }
   loadCategories(): void {

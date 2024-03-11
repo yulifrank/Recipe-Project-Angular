@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 import { RecipeCardComponent } from './component/recipe-card/recipe-card.component';
 import { RecipesListComponent } from './component/recipes-list/recipes-list.component';
 import { RecipeRoutingModule } from './recipe-routing.module';
@@ -16,9 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeAllDetailsComponent } from './component/recipe-all-details/recipe-all-details.component';
 import { EditRecipeComponent } from './component/edit-recipe/edit-recipe.component';
-import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
-// import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import {MatSliderModule} from '@angular/material/slider';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
@@ -26,15 +22,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { DurationPipe } from './duration-pipe.pipe';
 
 
-
-
-
-
-
 @NgModule({
   declarations: [RecipesListComponent,RecipeCardComponent,AddRecipeComponent,RecipeAllDetailsComponent,EditRecipeComponent,DurationPipe],
-  imports: [
-    CommonModule, RecipeRoutingModule,MatCardModule, MatSelectModule,MatButtonModule,MatIconModule,MatFormField,    MatInputModule,
+  imports:
+  [
+    CommonModule, RecipeRoutingModule,MatCardModule, MatSelectModule,MatButtonModule,MatIconModule,MatFormField, MatInputModule,
     MatFormFieldModule,MatOption,MatInputModule,   ReactiveFormsModule,FormsModule ,SidebarModule,
      MatSidenavModule,MatSliderModule,ButtonModule,MatCheckboxModule
   ],
