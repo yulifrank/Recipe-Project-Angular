@@ -35,4 +35,11 @@
            opacity: 0.5; /* שקיפות של 50% - אפשר לשנות את הערך לפי המבוקש */
            z-index: -1; /* שכבה אחורית מאחורי התוכן */
        }
-  
+       .all{
+        background-image: url('../../../../assets/images/bacground/4.jpg');
+        background-size: cover; /* כדי להתאים את התמונה לגודל של החלון */
+        background-attachment: fixed; /* כדי להשאיר את התמונה במקום כאשר ממסך נגללים */
+        background-position: center center; /* כדי למקד את התמונה באמצע הדף */
+        background-repeat: no-repeat; /* כדי לא לשקול את התמונה */
+        margin-top: 8%;
+       }

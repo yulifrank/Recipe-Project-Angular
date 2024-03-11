@@ -63,10 +63,11 @@ showRotatingIcon=false
             }
           } else {
             this.showRotatingIcon = true; // הצגת האייקון המסתובב
-  
+
             setTimeout(() => {
               this.route.navigate(['/user/register'], { queryParams: { name: username } });
-            }, 2000); // אם רוצים שהאנימציה תמשך שתי שניות
+
+            }, 2000); //
           }
         },
         (error) => {

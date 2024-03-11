@@ -1,3 +1,4 @@
+<div class="allp2">
 <div class="login-container">
     <div class="login-card">
         <div class="login-header">
@@ -6,28 +7,24 @@
         <div class="login-content">
             <form [formGroup]="registerForm" class="login-form" (ngSubmit)="onSubmit()">
                 <mat-form-field appearance="fill" class="form-field">
-                    <mat-label>Name</mat-label>
                     <div class="input-with-icon">
                         <mat-icon>person</mat-icon>
                         <input matInput placeholder="Enter your name" formControlName="Name" [value]="name">
                     </div>
                 </mat-form-field>
                 <mat-form-field appearance="fill" class="form-field">
-                    <mat-label>Address</mat-label>
                     <div class="input-with-icon">
                         <mat-icon>location_on</mat-icon>
                         <input matInput placeholder="Enter your address" formControlName="Address">
                     </div>
                 </mat-form-field>
                 <mat-form-field appearance="fill" class="form-field">
-                    <mat-label>Email</mat-label>
                     <div class="input-with-icon">
                         <mat-icon>email</mat-icon>
                         <input matInput placeholder="Enter your email" formControlName="Email">
                     </div>
                 </mat-form-field>
                 <mat-form-field appearance="fill" class="form-field">
-                    <mat-label>Password</mat-label>
                     <div class="input-with-icon">
                         <mat-icon>lock</mat-icon>
                         <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="Password">
@@ -44,4 +41,4 @@
         </div>
     </div>
   </div>
-  
+</div>

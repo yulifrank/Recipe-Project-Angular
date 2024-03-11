@@ -83,7 +83,9 @@ export class RecipeAllDetailsComponent implements OnInit {
     // בדיקה אם המשתמש הנוכחי קיים בזיכרון והוא הוא המשתמש שערך את המתכון
     return this.currentUserCode !== null && this.currentUserCode === this.recipe.userCode;
 } 
-  deleteRecipe() {
+
+
+deleteRecipe() {
     if (this.currentUserCode !== null && this.currentUserCode === this.recipe.userCode) {
       Swal.fire({
         title: 'האם הינך בטוח שברצונך למחוק את המתכון?',
@@ -103,9 +105,8 @@ export class RecipeAllDetailsComponent implements OnInit {
                 'המתכון נמחק בהצלחה.',
                 'success'
               );
-              // הפניה לרשימת המתכונים או לדף אחר לפי הצורך
-              // לדוגמה:
-              // this.router.navigate(['/recipe/recipes-list']);
+              // הפניה לרשימת המתכונים
+              this.router.navigate(['/recipe']);
             },
             error: (err) => {
               console.log(err);
@@ -127,5 +128,6 @@ export class RecipeAllDetailsComponent implements OnInit {
       );
     }
   }
+
   
 }
