@@ -37,9 +37,9 @@
 }
 
 .user-profile{
-    margin-top: -3%;
-    color: rgb(179, 56, 82);
-    margin-left: 2%;
+    color: rgb(0, 0, 0);
+    z-index: 12345;
+    font-size: 15px;
 }
 .img1{
     width:6%;
@@ -47,6 +47,15 @@ position: fixed;
 top: 0.2%;
 right: 4vw;
 z-index: 206;
+}
+.user-profile {
+    color: rgb(0, 0, 0);
+    z-index: 12345;
+    font-size: 15px;
+    position: fixed;
+    top: 0.2%;
+    left: 1vw; /* שינוי כאן לצד שמאל */
+    direction: ltr;
 }
 
 

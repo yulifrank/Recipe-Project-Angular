@@ -12,7 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrl: './top-bar.component.css'
 })
 export class TopBarComponent {
-  username: string | null = null;
+  username: string | null = "אינך מחובר";
 
   constructor(private route: Router) {
    }

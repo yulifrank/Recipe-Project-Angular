@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Net;
+using System.Xml.Linq;
 
 namespace Recipe_App.Controllers
 {
@@ -38,6 +40,12 @@ namespace Recipe_App.Controllers
                 Name = "שירה לב",
                 Address = "רמת גן",
                 Email = "shira@gmail.com",
+                Password = "shira"
+         },  new User{
+                Code = 5,
+                Name = " כהן דן",
+                Address = "רמת גן",
+                Email = "dan@gmail.com",
                 Password = "shira"
             }
         };

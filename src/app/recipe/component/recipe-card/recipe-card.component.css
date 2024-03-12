@@ -130,3 +130,8 @@
   }
   
 
+  .edit-button-disabled {
+    color: lightgray; /* Change the color to a lighter shade */
+    cursor: not-allowed; /* Change the cursor to indicate the button is disabled */
+  }
+  

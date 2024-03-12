@@ -1,29 +1,28 @@
 <div class="recipe-container">
   <div class="recipe-header">
     <div class="recipe-img">
+      
+
       <img mat-card-image [src]="recipe.imageRoute" alt="תמונת מתכון">
     </div>
-
     <div class="recipe-details">
-      <div *ngIf="user" mat-card-avatar class="usercircle1 usercircle">{{ user.name }}</div>
-      <div class="recipe-name"><b>{{ recipe.recipeName }}</b></div>
-      
-      <div class="recipe-difficulty-time">
-        <div class="detail">
-          <span><b>דרגת קושי:</b> {{ recipe.difficultyLevel }}</span>
-        </div>
-        <div class="detail">
-          <span><b>זמן ההכנה:</b> {{ recipe.preparationTimeInMinutes | duration }}</span>
-        </div>
+      <div class="in-recipeDetails">
         <div *ngIf="category" class=" detail category-details">
           <mat-icon>{{ category.iconRoute }}</mat-icon>
-          <span>{{ category.name }}</span>
+          <div>{{ category.name }}</div>
         </div>
+        <div class="recipe-name"><b>{{ recipe.recipeName }}</b></div>
+        <span><br><br><br><br>!מתכון חלומי שכולם אוהבים <br><br>!!!גם יפה גם מרשים וגם... טעים<br><br>👄רק מכינים וכבר נגמר </span>
+        <div id="user-created"> <mat-card-subtitle><b>מאת: </b>{{user.name }}</mat-card-subtitle>
+          <div id="space"></div>
+          <div *ngIf="user" mat-card-avatar class="usercircle">{{ user.name[0] }}</div>
+        </div>
+        <button class="white" mat-button *ngIf="isCurrentUserRecipeOwner()" class="delete-button" (click)="deleteRecipe()">מחיקת
+          מתכון</button>
       </div>
-      
+
     </div>
   </div>
-
   <ul class="list-group">
     <li class="list-group-item" id="list-group-item4">
       <mat-icon>local_grocery_store</mat-icon>
@@ -66,4 +65,4 @@
   <div class="sof">!!!בתאבון</div>
 </div>
 
-<button mat-button *ngIf="isCurrentUserRecipeOwner()" class="delete-button" (click)="deleteRecipe()">מחיקת מתכון</button>
+

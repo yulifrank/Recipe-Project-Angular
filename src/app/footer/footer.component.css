@@ -1,32 +1,92 @@
-.footer {
-    background-color: #f8f9fa; /* רקע אפור */
-    color: #495057; /* צבע טקסט אפור כהה */
-    padding: 20px; /* מרווח מסביב לתוכן */
+/*  */
+/* סגנון כללי */
+
+
+  
+  footer {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    direction: rtl;
     margin-top: 40%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-links a,
-.login-with a {
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  .about-us, .contact-info, .social-media {
+    margin-bottom: 30px;
+  }
+  
+  .about-us h2, .contact-info h2, .social-media h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .about-us p, .contact-info p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-media ul li a {
+    color: #777;
+    font-size: 18px;
     text-decoration: none;
-    color: #495057;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.login-with a {
-    margin-right: 0;
-}
-
-.mat-icon {
-    margin-right: 5px;
-}
-.footer-links{display: flex;
-    margin: auto
-;}
+  }
+  
+  .social-media ul li a:hover {
+    color: #333;
+  }
+  
+  
+  .links {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .links ul li a {
+    color: #777;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .links ul li a:hover {
+    color: #333;
+  }
+  
+  
+  .copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 0;
+  }
+  
+  .copyright a {
+    color: #333;
+    text-decoration: none;
+  }
+  

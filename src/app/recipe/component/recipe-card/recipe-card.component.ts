@@ -12,6 +12,7 @@ import { DurationPipe } from '../../duration-pipe.pipe';
   styleUrl: './recipe-card.component.css'
 })
 export class RecipeCardComponent {
+
  recipe!: Recipe; 
   @Input() index !: number; // קבלת ה-index כקלט
   isLiked: boolean = false;
@@ -86,6 +87,11 @@ export class RecipeCardComponent {
       this.router.navigate(['user/login']);
     }
 }
+isCreatorUser(): boolean {
+  const userCode = sessionStorage.getItem('userCode'); // Retrieve the user code from local storage
+  return userCode && +userCode === this.createdByUserCode;
+}
+
 }
 
 

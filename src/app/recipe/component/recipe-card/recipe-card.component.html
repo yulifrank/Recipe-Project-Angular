@@ -4,7 +4,7 @@
       <!-- התמונה החדשה -->
       <div *ngIf="createdByUsername" mat-card-avatar class="usercircle">{{ createdByUsername[0] }}</div>
       <mat-card-title>{{ recipe.recipeName }}</mat-card-title>
-      <mat-card-subtitle>נעשה על ידי {{createdByUsername }}</mat-card-subtitle>
+      <mat-card-subtitle>מאת: {{createdByUsername }}</mat-card-subtitle>
 
     </mat-card-header>
     <img  (click)="toAllDetails()"  mat-card-image [src]="recipe.imageRoute" alt="תמונת מתכון">
@@ -21,9 +21,18 @@
         <div>זמן הכנה :{{ recipe.preparationTimeInMinutes | duration }}</div>
       </div>
     <mat-card-actions>
-      <button mat-button class="like-button" (click)="toggleLike()">LIKE</button>
-      <button mat-button (click)="toAllDetails()">למתכון</button>
-      <button mat-button (click)="editRecipe()">עריכת מתכון</button>
+      <button mat-button class="like-button" (click)="toggleLike()">
+        <mat-icon>favorite</mat-icon> LIKE
+      </button>
+      
+      <button mat-button (click)="toAllDetails()">
+        <mat-icon>receipt</mat-icon> למתכון
+      </button>
+      
+      <button mat-button [ngClass]="{'edit-button-disabled': !isCreatorUser()}" (click)="editRecipe()">
+        <mat-icon>edit</mat-icon> Edit Recipe
+      </button>
+      
 
       <div class="like-animation" [ngClass]="{ 'liked': isLiked }">
         <mat-icon color="black">thumb_up</mat-icon>

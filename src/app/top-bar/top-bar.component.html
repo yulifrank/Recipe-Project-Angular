@@ -35,11 +35,12 @@
             <mat-icon>home</mat-icon>
             דף הבית
         </a>
-  
+        <div ngIf="username" class="user-profile">
+            {{ username }}
+            <mat-icon>person</mat-icon>
+        </div>
     </span>
-
+ 
+    
 </mat-toolbar>
-<div ngIf="username" class="user-profile">
-    {{ username }}
-</div>
 
