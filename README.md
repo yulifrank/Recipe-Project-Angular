@@ -1,8 +1,19 @@
 # RecipeProject
-# do npm  i:
+# run npm  i:
 this command with --force or --legacy-peer-deps
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+
+
+
+
+
+
+
+
+
+
+
 
 ## Development server
 
