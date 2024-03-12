@@ -98,7 +98,10 @@ export class RegisterComponent implements OnInit {
             title: 'ברוך הבא נרשמת בהצלחה! ',
             confirmButtonColor: 'rgb(179, 56, 82)'
           });
+          console.log("new",newUser)
           return this.userService.createUser(newUser);
+          
+          
         }
       })
     ).subscribe(() => {

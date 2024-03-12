@@ -43,7 +43,7 @@ button.mat-raised-button {
   background-attachment: fixed; /* כדי להשאיר את התמונה במקום כאשר ממסך נגללים */
   background-position: center center; /* כדי למקד את התמונה באמצע הדף */
   background-repeat: no-repeat; /* כדי לא לשקול את התמונה */
-  margin-top: 7%;
+  margin-top: 6%;
 }
 
 

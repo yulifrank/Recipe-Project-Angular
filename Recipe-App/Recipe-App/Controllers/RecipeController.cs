@@ -11,7 +11,7 @@ namespace Recipe_App.Controllers
     private static List<Recipe> recipes = new List<Recipe> {
      new Recipe {
         RecipeCode = 0,
-        RecipeName = "עוגת קומוות חגיגית",
+        RecipeName = "עוגת קומוות ",
         CategoryCode = 1,
         PreparationTimeInMinutes = 45,
         DifficultyLevel = 5,
@@ -77,7 +77,7 @@ PreparationSteps = new List<string> { "חמם את התנור ל-350 מעלות 
      new Recipe
       {
         RecipeCode = 6,
-        RecipeName = "פאי שוקולד פיסטוק",
+        RecipeName = "פאי שוקולד ",
         CategoryCode = 1,
         PreparationTimeInMinutes = 45,
         DifficultyLevel = 3,
@@ -115,7 +115,7 @@ PreparationSteps = new List<string> { "חמם את התנור ל-350 מעלות 
      new Recipe
 {
     RecipeCode = 7,
-    RecipeName = "עוגיות קרמל ממולאות",
+    RecipeName = "עוגיות קרמל ",
     CategoryCode = 2,
     PreparationTimeInMinutes = 45,
     DifficultyLevel = 2,
@@ -296,7 +296,7 @@ PreparationSteps = new List<string> { "חמם את התנור ל-350 מעלות 
 },
     new Recipe
 {
-    RecipeCode = 17,
+    RecipeCode = 45,
     RecipeName = "קינוח חלבי",
     CategoryCode = 3,
     PreparationTimeInMinutes = 65,
@@ -311,8 +311,8 @@ PreparationSteps = new List<string> { "חמם את התנור ל-350 מעלות 
 
   new Recipe
 {
-    RecipeCode = 18,
-    RecipeName = "עוגת גבינה ופסיטוק ",
+    RecipeCode = 46,
+    RecipeName = "עוגת גבינה  ",
     CategoryCode = 4,
     PreparationTimeInMinutes = 25,
     DifficultyLevel = 4,
@@ -324,8 +324,8 @@ PreparationSteps = new List<string> { "חמם את התנור ל-350 מעלות 
 },
  new Recipe
 {
-    RecipeCode = 18,
-    RecipeName = "עוגת קומות עשירה  ",
+    RecipeCode = 47,
+    RecipeName = "עוגת קומות   ",
     CategoryCode = 5,
     PreparationTimeInMinutes = 65,
     DifficultyLevel = 4,

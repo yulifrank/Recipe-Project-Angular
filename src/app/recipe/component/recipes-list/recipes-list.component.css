@@ -80,22 +80,22 @@ margin-top: 0%;}
 .custom-input {
     direction: rtl;
     position: relative;
-    width: 200px; /* רוחב האינפוט */
-    margin-bottom: 9px; /* מרווח מתחת לאינפוט */
+    width: 200px; 
+    margin-bottom: 9px; 
     margin-left: 5%;
 
 
 }
 
 .custom-input input[type="text"] {
-    width: calc(100% - 30px); /* רוחב האינפוט כולל האייקון */
+    width: calc(100% - 30px); 
     padding-top: 2px;
     padding-bottom: 2px;
     font-size: 16px;
-    border: 1px solid #ccc; /* גבולות האינפוט */
-    border-radius: 5px; /* פינות מעוגלות */
-    outline: none; /* מניעת הדגשה */
-    transition: border-color 0.3s ease; /* אנימציה של צבע הגבול */
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    outline: none; 
+    transition: border-color 0.3s ease; 
     height: 2vw;
     margin-top: 7%;
     background-color: #f5f2ed;
@@ -105,7 +105,7 @@ margin-top: 0%;}
 }
 
 .custom-input input[type="text"]:focus {
-    border-color: #8e0155; /* צבע הגבול כאשר האינפוט במצב פעיל */
+    border-color: #8e0155; 
 
 
 }

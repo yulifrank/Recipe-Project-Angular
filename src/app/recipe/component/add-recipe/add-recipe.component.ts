@@ -17,14 +17,14 @@ import Swal from 'sweetalert2';
 export class AddRecipeComponent implements OnInit {
   recipeForm!: FormGroup ;
   categories: Category[] = []; // רשימת הקטגוריות
-  showRotatingIcon=false
-
-
+  showRotatingIcon=false;
+   usercode:number;
   constructor(
     private formBuilder: FormBuilder, 
     private router: Router,
     private categoryService: CategoryServiceService ,// שימוש בשירות הקטגוריות
-    private recipeService: RecipeServiceService
+    private recipeService: RecipeServiceService,
+  
   ) {}  ngOnInit(): void {
     const isLoggedIn = sessionStorage.getItem('username') && sessionStorage.getItem('password');
     if (!isLoggedIn) {
@@ -90,7 +90,7 @@ addIngredients(): void {
       const userCode: any = sessionStorage.getItem('userCode');
       const userCodeNumber = parseInt(userCode);
       console.log("usercode---", userCodeNumber);
-  
+
       const newRecipe: Recipe = {
         recipeCode: 0,
         recipeName: this.recipeForm.value.recipeName,

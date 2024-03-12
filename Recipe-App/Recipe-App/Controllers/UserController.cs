@@ -13,7 +13,7 @@ namespace Recipe_App.Controllers
         {
             new User
             {
-                Code = 1,
+                Code = 0,
                 Name = "שרי שניצר",
                 Address = "רחוב בעל התניא",
                 Email = "s@gmail.com.com",
@@ -21,7 +21,7 @@ namespace Recipe_App.Controllers
             },
             new User
             {
-                Code = 2,
+                Code = 1,
                 Name = "יעל פרנק",
                 Address = "שטרסר 2 בני ברק",
                 Email = "yaelf2278@gmail.com",
@@ -29,20 +29,21 @@ namespace Recipe_App.Controllers
             },
               new User
             {
-                Code = 3,
+                Code = 2,
                 Name = "עדי בר",
                 Address = "רחוב אבא הילל 5",
                 Email = "yyy@gmail.com",
                 Password = "adi"
             },  new User
             {
-                Code = 4,
+                Code = 3,
                 Name = "שירה לב",
                 Address = "רמת גן",
                 Email = "shira@gmail.com",
                 Password = "shira"
-         },  new User{
-                Code = 5,
+         },
+      new User{
+                Code = 4,
                 Name = " כהן דן",
                 Address = "רמת גן",
                 Email = "dan@gmail.com",
@@ -73,6 +74,7 @@ namespace Recipe_App.Controllers
     [HttpPost]
     public void Post([FromBody] User user)
     {
+      user.Code = users[users.Count() - 1].Code + 1;
       users.Add(user);
     }
 

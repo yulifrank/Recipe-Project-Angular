@@ -31,6 +31,8 @@ export class RecipeCardComponent {
             console.log("user",user)
             this.createdByUsername = user.name;
             console.log("createdByUsername",this.createdByUsername)
+            console.log("createdByUserCode",this.createdByUserCode)
+
 
           },
           error: (err) => {
@@ -56,7 +58,7 @@ export class RecipeCardComponent {
   }
   editRecipe() {
     const userCode = sessionStorage.getItem('userCode'); // משיכת קוד המשתמש מהזיכרון המקומי
-  
+  console.log("createdByUserCode",this.createdByUserCode)
     if (userCode && +userCode === this.createdByUserCode) { // המרת הערך של userCode למספר ובדיקה האם זהו אותו משתמש שיצר את המתכון
       // אם זהו אותו משתמש, מעבירים אותו לדף העריכה
       this.router.navigate([`recipe/recipes-list/${this.index}/edit`]);
@@ -72,7 +74,9 @@ export class RecipeCardComponent {
   toAllDetails() {
     const username = sessionStorage.getItem('username'); // משיכת שם משתמש מהזיכרון המקומי
     const password = sessionStorage.getItem('password'); // משיכת סיסמה מהזיכרון המקומי
-  
+    const code = sessionStorage.getItem('userCode'); // משיכת סיסמה מהזיכרון המקומי
+
+  console.log("code",code)
     if (username && password) {
       // כאן את צריכה לציין את הכתובת המלאה של הקומפוננטה לכתובת הנדרשת עם האינדקס
  
@@ -89,7 +93,8 @@ export class RecipeCardComponent {
 }
 isCreatorUser(): boolean {
   const userCode = sessionStorage.getItem('userCode'); // Retrieve the user code from local storage
-  return userCode && +userCode === this.createdByUserCode;
+  console.log()
+  return userCode && Number(userCode) === this.createdByUserCode;
 }
 
 }

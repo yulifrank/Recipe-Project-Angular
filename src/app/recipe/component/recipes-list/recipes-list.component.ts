@@ -47,9 +47,6 @@ export class RecipesListComponent implements OnInit {
       return timeFilter && difficultyFilter && categoryFilter && nameFilter;
     });
   }
-  
-  
-
   // Function to filter recipes based on preparation time
   filterByTime(v: number): void {
     this.value1 = v;
@@ -73,13 +70,5 @@ export class RecipesListComponent implements OnInit {
     this.filterRecipes();
   }
 
-  // Function to apply all filters and update filteredRecipes
-  // filterRecipes(): void {
-  //   this.filteredRecipes = this.recipes.filter(recipe => {
-  //     const timeFilter = this.value1 === 0 || recipe.preparationTimeInMinutes <= this.value1;
-  //     const difficultyFilter = this.value === 0 || recipe.difficultyLevel === this.value;
-  //     const categoryFilter = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryCode);
-  //     return timeFilter && difficultyFilter && categoryFilter;
-  //   });
-  // }
+
 }
