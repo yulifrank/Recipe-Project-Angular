@@ -7,6 +7,7 @@ import { Category } from '../../../category.model';
 import { HttpClient } from '@angular/common/http';
 import { RecipeServiceService } from '../../../recipe-service.service';
 import { Recipe } from '../../../recipe.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-recipe',
@@ -86,39 +87,54 @@ addIngredients(): void {
   addRecipe(): void {
     if (this.recipeForm.valid) {
       // הגדרת המתכון מהטופס
-      const userCode:any = sessionStorage.getItem('userCode');
-      let userCodeNumber = parseInt(userCode);
-      console.log("usercode---",userCodeNumber)
-
-
+      const userCode: any = sessionStorage.getItem('userCode');
+      const userCodeNumber = parseInt(userCode);
+      console.log("usercode---", userCodeNumber);
+  
       const newRecipe: Recipe = {
-        recipeCode: 0, 
+        recipeCode: 0,
         recipeName: this.recipeForm.value.recipeName,
         categoryCode: this.recipeForm.value.category,
         preparationTimeInMinutes: this.recipeForm.value.preparationTime,
         difficultyLevel: this.recipeForm.value.difficultyLevel,
-        dateAdded: new Date(), 
-        ingredients: this.recipeForm.value.ingredients,
-        preparationSteps: this.recipeForm.value.preparationSteps,
-        userCode: userCodeNumber, 
+        dateAdded: new Date(),
+        ingredients: this.recipeForm.value.ingredients.filter((ingredient: string) => ingredient.trim() !== ''), // מסננים את הריקים
+        preparationSteps: this.recipeForm.value.preparationSteps.filter((step: string) => step.trim() !== ''), // מסננים את הריקים
+        userCode: userCodeNumber,
         imageRoute: this.recipeForm.value.imageRoute
       };
   
       // ביצוע בקשת POST לשרת
       this.recipeService.addRecipe(newRecipe).subscribe(
         () => {
-          alert('The recipe was successfully added');
-          this.router.navigate(['/recipe/recipes-list']);
+          Swal.fire({
+            title: 'המתכון נוסף בהצלחה!',
+            icon: 'success',
+            confirmButtonText: 'אישור'
+          }).then(() => {
+            this.router.navigate(['/recipe/recipes-list']);
+          });
         },
         (error) => {
           console.error('Error adding recipe:', error);
-          alert('Error adding recipe');
+          Swal.fire({
+            title: 'שגיאה בהוספת המתכון',
+            text: 'נא לנסות שוב מאוחר יותר',
+            icon: 'error',
+            confirmButtonText: 'אישור'
+          });
         }
       );
     } else {
-      alert('Please fill in all fields');
+      Swal.fire({
+        title: 'יש למלא את כל השדות',
+        text: 'נא למלא את כל השדות הנדרשים',
+        icon: 'warning',
+        confirmButtonText: 'אישור'
+      });
     }
   }
+  
 
   
 }
