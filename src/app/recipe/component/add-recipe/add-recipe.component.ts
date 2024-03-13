@@ -52,8 +52,8 @@ export class AddRecipeComponent implements OnInit {
       difficultyLevel: ['', Validators.required],
       ingredients: this.formBuilder.array([]),
       preparationSteps: this.formBuilder.array([]),
-      userCode: ['3', Validators.required],
-      imageRoute: ['../../../../assets/images/recipe-images/7.jpg', Validators.required]
+      userCode: ['0', Validators.required],
+      imageRoute: ['../../../../assets/images/recipe-images/10.jpg', Validators.required]
     });
   }
   loadCategories(): void {
