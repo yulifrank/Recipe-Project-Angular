@@ -1,13 +1,10 @@
-/*  */
-/* סגנון כללי */
-
-
-  
+ 
   footer {
-    background-color: #f7f7f7;
-    padding: 40px 0;
+    background-color: #f5f2ed;
     direction: rtl;
-    margin-top: 40%;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+   
   }
   
   .container {
@@ -21,6 +18,7 @@
   }
   
   .about-us h2, .contact-info h2, .social-media h2 {
+    margin-top: 2vw;
     font-size: 24px;
     margin-bottom: 15px;
   }
@@ -89,4 +87,6 @@
     color: #333;
     text-decoration: none;
   }
-  
+  .icon{
+width: 2vw;
+  }

@@ -32,6 +32,9 @@
       <button mat-button [ngClass]="{'edit-button-disabled': !isCreatorUser()}" (click)="editRecipe()">
         <mat-icon>edit</mat-icon> עריכה
       </button>
+      <button mat-button [ngClass]="{'edit-button-disabled': !isCreatorUser()}" (click)="deleteRecipe()">
+        <mat-icon>delete</mat-icon> מחיקה
+      </button>
       
 
       <div class="like-animation" [ngClass]="{ 'liked': isLiked }">

@@ -51,6 +51,7 @@ showRotatingIcon=false
                 title: 'User Exists!',
                 text: 'User was found in the system.'
               });
+
               this.route.navigate(['/recipe/recipes-list']);
   
             }
@@ -65,6 +66,7 @@ showRotatingIcon=false
             this.showRotatingIcon = true; // הצגת האייקון המסתובב
 
             setTimeout(() => {
+              location.reload();
               this.route.navigate(['/user/register'], { queryParams: { name: username } });
 
             }, 2000); //

@@ -71,6 +71,48 @@ export class RecipeCardComponent {
       });
     }
   }
+
+  deleteRecipe(){
+      Swal.fire({
+        title: 'האם הינך בטוח שברצונך למחוק את המתכון?',
+        text: "לא תהיה אפשרות לבטל את הפעולה פעם שהיא נעשתה",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'כן, מחק את המתכון'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // ביצוע פעולת המחיקה כאן
+          this.recipeService.deleteRecipe(this.recipe.recipeCode).subscribe({
+            next: () => {
+              Swal.fire(
+                'נמחק!',
+                'המתכון נמחק בהצלחה.',
+                'success'
+              );
+              // הפניה לרשימת המתכונים
+              this.router.navigate(['recipe']);
+              // רענון הדף
+              location.reload();
+            },
+            error: (err) => {
+              console.log(err);
+              Swal.fire(
+                'שגיאה!',
+                'אירעה שגיאה במחיקת המתכון.',
+                'error'
+              );
+            }
+          });
+        }
+      });
+   
+  }
+
+
+
+
   toAllDetails() {
     const username = sessionStorage.getItem('username'); // משיכת שם משתמש מהזיכרון המקומי
     const password = sessionStorage.getItem('password'); // משיכת סיסמה מהזיכרון המקומי

@@ -9,8 +9,12 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
 
+	ngOnInit(): void {
+
+
+  }
   images = [1, 2, 3, 4, 5, ].map((n) => `../../assets/images/recipe-images/${n}.jpg`);
 
 	paused = false;

@@ -25,6 +25,7 @@ export class LogoutComponent implements OnInit  {
     }).then((result) => {
       if (result.isConfirmed) {
         sessionStorage.clear();
+
         this.router.navigate(['/']); // ניתוב לדף הבית
       }
       this.router.navigate(['/']); // ניתוב לדף הבית
