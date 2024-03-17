@@ -25,9 +25,7 @@ export class RecipesListComponent implements OnInit {
   constructor(private recipeService: RecipeServiceService) { }
 
   ngOnInit(): void {
-
     this.getRecipes();
-
   }
 
   getRecipes(): void {
@@ -36,6 +34,7 @@ export class RecipesListComponent implements OnInit {
       this.filteredRecipes = [...recipes]; // Copy all recipes to filtered recipes initially
     });
   }
+
   filterByName(): void {
     this.filterRecipes();
   }
@@ -49,19 +48,17 @@ export class RecipesListComponent implements OnInit {
       return timeFilter && difficultyFilter && categoryFilter && nameFilter;
     });
   }
-  // Function to filter recipes based on preparation time
+
   filterByTime(v: number): void {
     this.value1 = v;
     this.filterRecipes();
   }
 
-  // Function to filter recipes based on difficulty level
   filterByDifficulty(v: number): void {
     this.value = v;
     this.filterRecipes();
   }
 
-  // Function to filter recipes based on selected categories
   filterByCategory(category: number): void {
     const index = this.selectedCategories.indexOf(category);
     if (index !== -1) {
@@ -72,5 +69,23 @@ export class RecipesListComponent implements OnInit {
     this.filterRecipes();
   }
 
+  resetFilters(): void {
+    this.value = 0; // Reset difficulty level filter value
+    this.value1 = 0; // Reset preparation time filter value
+    this.selectedCategories = []; // Reset selected categories
+    this.recipeNameFilter = ''; // Reset recipe name filter
+    this.filterRecipes(); // Apply the reset filters
+  }
 
+  closeSidebar(): void {
+    this.sidebarVisible2 = false; // Close the sidebar
+    this.resetFilters(); // Reset the filters
+  }
+  toggleSidebar(): void {
+    this.sidebarVisible2 = !this.sidebarVisible2;
+    if (!this.sidebarVisible2) {
+      this.closeSidebar();
+    }
+  }
+  
 }

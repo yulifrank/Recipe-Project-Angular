@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-vCgHm37HFbcF1IgGXU8n9OENc2MqXe3N2PzIVBwMBj/kX8n34fwvKqMzRWAw7iXs39uazN+JK0JlP9nGnugSng==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<p-sidebar [(visible)]="sidebarVisible2" position="right" class="custom-sidebar">
 
+  <p-sidebar [(visible)]="sidebarVisible2"  position="right" class="custom-sidebar">
 
   <div id="time-slider" class="slider">
     <h3 class="h-filter">זמן הכנה</h3>
@@ -47,13 +47,21 @@
     <p>עוגיות <mat-checkbox (change)="filterByCategory(2)"></mat-checkbox></p>
     <p>קינוחים <mat-checkbox (change)="filterByCategory(3)"></mat-checkbox></p>
     <p>פטיפורים <mat-checkbox (change)="filterByCategory(4)"></mat-checkbox></p>
+
   </section>
+  
+
 </p-sidebar>
 
-<button mat-button id="buttonSideBar" (click)="sidebarVisible2 = true" *ngIf="sidebarVisible2 !== true">
+<button mat-button id="buttonSideBar" (click)="sidebarVisible2 = true"  *ngIf="sidebarVisible2 !== true">
+
+  
   <mat-icon color="black">filter_alt</mat-icon>
   סינון
 </button>
+
+
+
 
 <div class="recipes-list" id="recipe-list">
   <app-recipe-card *ngFor="let recipe of filteredRecipes; let i=index" [index]="recipe.recipeCode"></app-recipe-card>
@@ -61,8 +69,14 @@
   <div class="h-filter1">
     <div class="custom-input">
       <input class="narrow-input" type="text" placeholder="חפש מתכון כאן" [(ngModel)]="recipeNameFilter" (ngModelChange)="filterByName()">
-      <button mat-icon-button>
+      <button class="button" mat-icon-button>
         <mat-icon style="color: #841f44;">search</mat-icon>
       </button>
+      <button class="button" mat-icon-button id="resetFiltersButton" (click)="resetFilters()">
+        <mat-icon>clear</mat-icon> <!-- אייקון "cancel" ממערכת הסמלים של Angular Material -->
+
+      </button>
     </div>
+
+
   </div>

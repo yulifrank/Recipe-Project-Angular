@@ -14,7 +14,7 @@ namespace Recipe_App.Controllers
             new User
             {
                 Code = 0,
-                Name = "שרי שניצר",
+                Name = "נעמה פרנק",
                 Address = "רחוב בעל התניא",
                 Email = "s@gmail.com.com",
                 Password = "123456"
