@@ -26,6 +26,7 @@ export class AddRecipeComponent implements OnInit {
     private recipeService: RecipeServiceService,
   
   ) {}  ngOnInit(): void {
+    window.scroll(0,0)
     const isLoggedIn = sessionStorage.getItem('username') && sessionStorage.getItem('password');
     if (!isLoggedIn) {
       {
